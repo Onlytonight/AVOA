@@ -318,8 +318,6 @@ TRAFFIC_PROFILE = 'gravity_1'  # gravity_1 gravity_2 gravity_few uniform
 INIT_SAMPLE = 0
 ROUTING = 'sp'
 env = Environment(env_type=ENV_TYPE, traffic_profile=TRAFFIC_PROFILE, init_sample=INIT_SAMPLE, routing=ROUTING)
-result_dir = 'result/pop'
-path = str(ENV_TYPE) + '-' + str(TRAFFIC_PROFILE) + '-bet-修改'
 
 rng = np.random.default_rng()
 time_start = time.time()
@@ -332,6 +330,8 @@ beta = 2
 dim = len(env.G.edges)  # The dimension.
 fl = 1  # The lower bound of the search interval.
 ul = 2  # The upper bound of the search interval.搜索区间1-2
+result_dir = 'result/pop'
+path = str(ENV_TYPE) + '-' + str(TRAFFIC_PROFILE)+'pop='+str(pop)
 lb = fl * np.ones([dim, 1])
 ub = ul * np.ones([dim, 1])
 
