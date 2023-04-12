@@ -318,7 +318,7 @@ TRAFFIC_PROFILE = 'gravity_1'  # gravity_1 gravity_2 gravity_few uniform
 INIT_SAMPLE = 0
 ROUTING = 'sp'
 env = Environment(env_type=ENV_TYPE, traffic_profile=TRAFFIC_PROFILE, init_sample=INIT_SAMPLE, routing=ROUTING)
-result_dir = 'result/AVOA_wrap/5000'
+result_dir = 'result/pop'
 path = str(ENV_TYPE) + '-' + str(TRAFFIC_PROFILE) + '-bet-修改'
 
 rng = np.random.default_rng()
