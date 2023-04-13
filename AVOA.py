@@ -251,7 +251,8 @@ def AVA(pop, dim, lb, ub, Max_iter, fun):
             #         (np.sin((math.pi / 2) * (t / (Max_iter+more_iter))) ** Gama) + np.cos((math.pi / 2) * (t / (Max_iter+more_iter))) - 1)
             # F = (2 * random.random() + 1) * z * (1 - (t / (Max_iter+more_iter))) + t3
             F = 0
-            # F = np.clip(F, -0.01, 0.01)
+            # beta1 = 0.01
+            # F = np.clip(F, -beta1, beta1)
 
         fitenessList = []
         # For each vulture Pi
@@ -319,7 +320,8 @@ dim = len(env.G.edges)  # The dimension.
 fl = 1  # The lower bound of the search interval.
 ul = 2  # The upper bound of the search interval.搜索区间1-2
 result_dir = 'result/pop'
-path = str(ENV_TYPE) + '-' + str(TRAFFIC_PROFILE)+'pop='+str(pop)
+path = str(pop)
+
 lb = fl * np.ones([dim, 1])
 ub = ul * np.ones([dim, 1])
 

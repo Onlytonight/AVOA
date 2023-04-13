@@ -143,7 +143,7 @@ eps = 50  # 横坐标范围
 x_tick =11# 纵坐标范围
 y_tick = 20
 scale = 10  # 刻度
-length = 5000
+length = 7000
 
 path = "AVOA"
 name = str(length)+'com'
