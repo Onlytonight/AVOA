@@ -147,6 +147,6 @@ length = 7000
 
 path = "AVOA"
 name = str(length)+'com'
-# drawnormal()
-drawsns(length)
+drawnormal()
+# drawsns(length)
 show(path, name)
