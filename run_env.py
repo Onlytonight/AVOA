@@ -4,7 +4,7 @@ import random
 import numpy as np
 from config.config_run_env import *
 from env.environment import Environment
-from util.utils import save_statistic
+from util.util import save_statistic
 
 ENV_TYPE = 'NSFNET'
 TRAFFIC_PROFILE = 'gravity_1'
