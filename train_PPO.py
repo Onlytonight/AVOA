@@ -72,8 +72,9 @@ if __name__ == '__main__':
     # env = gym.make(RAM_CONTINUOUS_ENV_NAME)
     env=Environment()
     if AGENT_TYPE=='PPO':
-        agent = agent.PPO_Agent(state_size=42,
-                                 action_size=42,
+        STATE_SIZE = env.num_features * len(env.G.edges)
+        agent = agent.PPO_Agent(state_size=STATE_SIZE,
+                                 action_size=len(env.G.edges),
                                  lr=LEARNING_RATE,
                                  beta=BETA,
                                  eps=EPS,

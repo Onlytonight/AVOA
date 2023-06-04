@@ -2,7 +2,7 @@ import numpy as np
 import networkx as nx
 from env.environment import Environment
 from Q_learning.agent import QLearningAgent
-from util.utils import save_statistic
+from util.util import save_statistic
 from warnings import simplefilter
 
 simplefilter(action="ignore", category=FutureWarning)
